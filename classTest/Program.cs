@@ -27,8 +27,11 @@ namespace classTest
             a.MakeSound();
             Animal b = new Animal("bar","GomGom");
             b.MakeSound();
-            
-            Animal.G
+
+            Console.WriteLine("{0}", ShapeMath.GetArea("Rectangle",4,6));
+            Console.WriteLine("{0}", ShapeMath.GetArea("Triangle", 4, 6));
+            Console.WriteLine("{0}", ShapeMath.GetArea("Circle", 4));
+
 
             Console.ReadLine();
 
