@@ -19,8 +19,9 @@ namespace classTest
              Rectangle rect2 = new Rectangle(200,50);
              Console.WriteLine("rect leng : {0}, wid :{1}, Area :{2} ", rect2.leng, rect2.wid, rect2.Area());
              */
-
+            
             List<Animal> animals = new List<Animal>();
+
             animals.Add(new Animal("fox", "Raaww"));
             animals.Add(new Animal("Wolf", "Walllll"));
             animals.Add(new Animal("bar", "GomGom"));
@@ -30,17 +31,45 @@ namespace classTest
                 animal.MakeSound();
             }
 
-           /* var fox = new Animal("fox","Raaww");
-            fox.MakeSound();
-            var a = new Animal("Wolf","Walllll");
-            a.MakeSound();
-            var b = new Animal("bar","GomGom");
-            b.MakeSound();*/
+            Dictionary<enAnimalType, Animal> dicAnimals = new Dictionary<enAnimalType, Animal>();
+
+            dicAnimals.Add(enAnimalType.fox, new Animal("a", "Raaww"));
+            dicAnimals.Add(enAnimalType.dog, new Animal("b", "wallllll"));
+            dicAnimals.Add(enAnimalType.cat, new Animal("c", "nya"));
+            foreach (KeyValuePair<enAnimalType, Animal> item in dicAnimals)
+            {
+                var key = item.Key;
+                var value = item.Value;
+
+                value.MakeSound();
+            }
+
+            foreach (var item in dicAnimals.Values)
+            {
+                item.MakeSound();
+            }
+            Animal outanimal
+            if (dicAnimals.TryGetValue(enAnimalType.pig, out outanimal))
+            {
+                outanimal.MakeSound();
+            }
+            else
+            {
+                Console.WriteLine("not found");
+            }
+
+
+            /* var fox = new Animal("fox","Raaww");
+             fox.MakeSound();
+             var a = new Animal("Wolf","Walllll");
+             a.MakeSound();
+             var b = new Animal("bar","GomGom");
+             b.MakeSound();*/
 
 
 
 
-           
+
 
             Console.WriteLine("{0}", ShapeMath.GetArea(enShape.Rec,4,6));
             Console.WriteLine("{0}", ShapeMath.GetArea(enShape.Tri, 4, 6));
