@@ -27,7 +27,7 @@ namespace classTest
         }
         public void MakeSound()
         {
-            Console.WriteLine("Animal name : {0}, sound : {1} num:{2}",name,sound,GetNumOfAnimal());
+            Console.WriteLine("Animal name : {0}, sound : {1} ",name,sound);
         }
 
 

@@ -20,13 +20,22 @@ namespace classTest
              Console.WriteLine("rect leng : {0}, wid :{1}, Area :{2} ", rect2.leng, rect2.wid, rect2.Area());
              */
 
+            List<Animal> animals = new List<Animal>();
+            animals.Add(new Animal("fox", "Raaww"));
+            animals.Add(new Animal("Wolf", "Walllll"));
+            animals.Add(new Animal("bar", "GomGom"));
 
-            Animal fox = new Animal("fox","Raaww");
+            foreach (var animal in animals)
+            {
+                animal.MakeSound();
+            }
+
+           /* var fox = new Animal("fox","Raaww");
             fox.MakeSound();
-            Animal a = new Animal("Wolf","Walllll");
+            var a = new Animal("Wolf","Walllll");
             a.MakeSound();
-            Animal b = new Animal("bar","GomGom");
-            b.MakeSound();
+            var b = new Animal("bar","GomGom");
+            b.MakeSound();*/
 
 
 
