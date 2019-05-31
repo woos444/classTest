@@ -27,6 +27,8 @@ namespace classTest
             a.MakeSound();
             Animal b = new Animal("bar","GomGom");
             b.MakeSound();
+            
+            Animal.G
 
             Console.ReadLine();
 

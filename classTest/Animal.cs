@@ -8,19 +8,32 @@ namespace classTest
 {
     class Animal
     {
+
+        static int numOfAnimal =0;
+
         private string name;
         private string sound;
 
-        public Animal(){}
+        public Animal()
+        {
+            numOfAnimal++;
+        }
 
-        public Animal(string n,string a)
+        public Animal(string n,string s)
         {
             name = n;
-            sound = a;
+            sound = s;
+            numOfAnimal++;
         }
         public void MakeSound()
         {
-            Console.WriteLine("Animal name : {0}, sound : {1}",name,sound);
+            Console.WriteLine("Animal name : {0}, sound : {1} num:{2}",name,sound,GetNumOfAnimal());
+        }
+
+
+        static int GetNumOfAnimal()
+        {
+            return numOfAnimal;
         }
     }
 }
