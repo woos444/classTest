@@ -45,5 +45,10 @@ namespace classTest
         {
             return numOfAnimal;
         }
+
+        public string getName()
+        {
+            return name;
+        }
     }
 }

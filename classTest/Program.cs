@@ -25,39 +25,60 @@ namespace classTest
             animals.Add(new Animal("fox", "Raaww"));
             animals.Add(new Animal("Wolf", "Walllll"));
             animals.Add(new Animal("bar", "GomGom"));
+            animals.Add(new Animal("pig", "ddd"));
 
+
+            bool bFound = false;
             foreach (var animal in animals)
             {
-                animal.MakeSound();
+                var animalN = animal.getName();
+                if (animalN == "pig")
+                {
+                    bFound = true;
+                }  
             }
+            if (bFound == true) Console.WriteLine("pig found");
+            if (bFound != true) Console.WriteLine("no pig!");
 
-            Dictionary<enAnimalType, Animal> dicAnimals = new Dictionary<enAnimalType, Animal>();
 
-            dicAnimals.Add(enAnimalType.fox, new Animal("a", "Raaww"));
-            dicAnimals.Add(enAnimalType.dog, new Animal("b", "wallllll"));
-            dicAnimals.Add(enAnimalType.cat, new Animal("c", "nya"));
-            foreach (KeyValuePair<enAnimalType, Animal> item in dicAnimals)
-            {
-                var key = item.Key;
-                var value = item.Value;
 
-                value.MakeSound();
-            }
+            Animal mypig = animals.Find(item => item.getName().Equals("pig"));
+            if (mypig == null)Console.WriteLine("no pig");
+            else mypig.MakeSound();
 
-            foreach (var item in dicAnimals.Values)
-            {
-                item.MakeSound();
-            }
-            Animal outanimal
-            if (dicAnimals.TryGetValue(enAnimalType.pig, out outanimal))
-            {
-                outanimal.MakeSound();
-            }
-            else
-            {
-                Console.WriteLine("not found");
-            }
 
+
+
+            /////////////////////////////////////////
+            /*  Dictionary<enAnimalType, Animal> dicAnimals = new Dictionary<enAnimalType, Animal>();
+
+              dicAnimals.Add(enAnimalType.fox, new Animal("a", "Raaww"));
+              dicAnimals.Add(enAnimalType.dog, new Animal("b", "wallllll"));
+              dicAnimals.Add(enAnimalType.cat, new Animal("c", "nya"));
+              foreach (KeyValuePair<enAnimalType, Animal> item in dicAnimals)
+              {
+                  var key = item.Key;
+                  var value = item.Value;
+
+                  value.MakeSound();
+              }
+
+              foreach (var item in dicAnimals.Values)
+              {
+                  item.MakeSound();
+              }
+
+              Animal outanimal;
+              if (dicAnimals.TryGetValue(enAnimalType.pig, out outanimal))
+              {
+                  outanimal.MakeSound();
+              }
+              else
+              {
+                  Console.WriteLine("not found");
+              }
+
+              */
 
             /* var fox = new Animal("fox","Raaww");
              fox.MakeSound();
@@ -70,14 +91,16 @@ namespace classTest
 
 
 
-
+            /////////////////////////////////////
+            ///
+            /*
             Console.WriteLine("{0}", ShapeMath.GetArea(enShape.Rec,4,6));
             Console.WriteLine("{0}", ShapeMath.GetArea(enShape.Tri, 4, 6));
             Console.WriteLine("{0}", ShapeMath.GetArea(enShape.Cir, 4));
-
+            */
 
             Console.ReadLine();
-
+            
 
 
 
