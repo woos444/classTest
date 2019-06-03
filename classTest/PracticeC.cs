@@ -151,7 +151,7 @@ namespace classTest
 
 
             StringBuilder sb6 = new StringBuilder();
-            sb6.Append("");
+            sb6.Append("ㄴㄴㄴㄴㄴㄴㄴㄴㄴㄷㄷㄷㄷㄷㄷㄷ.");
 
             TrimEnd(sb6,'.');
             Console.WriteLine(sb6.ToString());
@@ -161,9 +161,8 @@ namespace classTest
 
         private static void TrimEnd(StringBuilder str, char v)
         {
-            int a = str.Length-1;
-            if (a <= 0) return;
-            if (str[a] == v)str.Length -= 1;
+            if (str.Length == 0) return;
+            if (str[str.Length - 1] == v) str.Length -= 1;
         }
 
         struct Rectangle
