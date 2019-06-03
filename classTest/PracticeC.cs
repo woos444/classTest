@@ -153,14 +153,17 @@ namespace classTest
             StringBuilder sb6 = new StringBuilder();
             sb6.Append("asdf zxcccc.");
 
-            TrimEnd(sb6);
+            TrimEnd(sb6,'.');
             Console.WriteLine(sb6.ToString());
 
 
         }
 
-        private static void TrimEnd(StringBuilder str)
-        {str.Length -= 1;}
+        private static void TrimEnd(StringBuilder str, char v)
+        {
+            int a = str.Length-1;
+            if (str[a] == v)str.Length -= 1;
+        }
 
         struct Rectangle
         {
