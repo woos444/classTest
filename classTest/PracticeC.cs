@@ -151,7 +151,7 @@ namespace classTest
 
 
             StringBuilder sb6 = new StringBuilder();
-            sb6.Append("asdf zxcccc.");
+            sb6.Append("");
 
             TrimEnd(sb6,'.');
             Console.WriteLine(sb6.ToString());
@@ -162,6 +162,7 @@ namespace classTest
         private static void TrimEnd(StringBuilder str, char v)
         {
             int a = str.Length-1;
+            if (a <= 0) return;
             if (str[a] == v)str.Length -= 1;
         }
 
