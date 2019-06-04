@@ -10,15 +10,7 @@ namespace classTest
     {
         static void Main(string[] args)
         {
-            string str = "abcDefGhijK"+"  "+"Ddd";
-            Console.WriteLine(str.ToLower());
-            Console.WriteLine(str.ToUpper());
-            Console.WriteLine(str.Contains("dd"));
-            Console.WriteLine(str[0]);
-            Console.WriteLine(str.IndexOf('f'));
-            Console.WriteLine(str.Substring(str.IndexOf("Ddd")));
-
-            PracticeC.pract2();
+            PracticeC.pract3();
             Console.ReadLine();
 
         }
