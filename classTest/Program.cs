@@ -10,7 +10,7 @@ namespace classTest
     {
         static void Main(string[] args)
         {
-            PracticeC.pract3();
+            PracticeC.pract4();
             Console.ReadLine();
 
         }

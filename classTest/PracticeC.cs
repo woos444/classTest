@@ -182,6 +182,30 @@ namespace classTest
                                   area.Item1, area.Item2, Math.Round(Math.Sqrt(area.Item2), 2));
 
         }
+        public static void pract4()
+        {
+            string id = "kwos", idl ;
+            string pw = "1234" , pwl;
+            back:
+            Console.Write("login\n");
+            Console.WriteLine("ID입력");
+            idl = Console.ReadLine();
+            Console.WriteLine("PW입력");
+            pwl = Console.ReadLine();
+
+            if (id == idl && pw == pwl) Console.WriteLine("Hello");
+
+            else if (id.ToUpper() != idl.ToUpper())
+            {
+                Console.WriteLine("ID!!!!!");
+                goto back;
+            }
+            else if (pw != pwl)
+            {
+                Console.WriteLine("PW!!!!!");
+                goto back;
+            }
+        }
         struct Rectangle
         {
             public double leng;
