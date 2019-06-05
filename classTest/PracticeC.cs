@@ -206,6 +206,13 @@ namespace classTest
                 goto back;
             }
         }
+        public static void pract5()
+        {
+           int[] st = new int[10] { 90, 75, 85, 95, 70,75,85,85,95,72 };
+           Console.WriteLine("합계 : {0} \n 평균: {1}", st.Sum(), st.Average());
+
+            
+        }
         struct Rectangle
         {
             public double leng;
