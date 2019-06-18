@@ -13,6 +13,9 @@ namespace classTest
 
 
 
+
+
+
             PracticeC.pract5();
             Console.ReadLine();
 
